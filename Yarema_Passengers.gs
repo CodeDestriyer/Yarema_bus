@@ -84,13 +84,13 @@ var DATA_START = 2;
 
 // ── ВСІ ТАБЛИЦІ СИСТЕМИ (SpreadsheetApp.openById) ──
 var DB = {
-  PASSENGERS: '1xJFRRkQquOdqK2gmSkd05pwUDNje3yif4yETM8abcE',
-  POSYLKI:    '1VhWTnsmvSy9uIAcYqLvr-Q5VHbvlDZmfismAxUzlh4g',
-  MARHRUT:    '1SxfXQ0E05D7OuzNa7oRQMsiLu2kNNynn/gtcSEAIAbQ',
-  KLIYENTU:   '1VCKct8J83S2_t1Qld76bItJ1n-r9oMgtVgwa/zS-PeY',
-  FINANCE:    '1JQBbXOqgrKfyCSDAltTqBt-SXwPkqhp-RUVtq162r4c',
-  CONFIG:     '1rfqMaZlg0fDlDpLl5id4ul-3z4jqC3OwwBWrYsOseJl',
-  ARCHIVE:    '1JJF_j8vE_GMer5NwJmYJR02CyzvtdPqZVpuCevH9VPr4'
+  PASSENGERS: '1xJFRRkQquOdqK2gmSkd05pwDfJNje3ylf4yETM8abcE',
+  POSYLKI:    '1VhWTnsmvSy9uTAcYqLvr-Q5VHbvlDZmfTsmAxUzJh4g',
+  MARHRUT:    '1SxfXQ0E05D7OuZNa7oRQMsiLu2kNNYnnJgtcSEATAbQ',
+  KLIYENTU:   '1VCKct8J83S2_t1Qld76blTj1n-r9oMgtVgwa7zS-PeY',
+  FINANCE:    '1jQBbXOggrKfyCSDARLTgBt-SXwPKqhp-RUVtq162r4c',
+  CONFIG:     '1rfgMaZJg0fDlDpLI5id4ul-3z4jqC3OwwBWrYsQseJI',
+  ARCHIVE:    '1JF_j8vE_GMer5NwJmYJR02CyzvtdPqZVpuCevH9VPr4'
 };
 
 // Головна таблиця цього скрипта
