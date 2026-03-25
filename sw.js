@@ -1,5 +1,5 @@
-// Borispol Vip Travel Service Worker — потрібен для PWA встановлення
-var CACHE_NAME = 'bvt-crm-v1';
+// Yarema Bus Service Worker — потрібен для PWA встановлення
+var CACHE_NAME = 'yarema-crm-v1';
 
 // Install — просто активуємось
 self.addEventListener('install', function(e) {
