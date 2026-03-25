@@ -1,6 +1,6 @@
 // ================================================================
-// Borispol_Vip_Travel_Passengers.gs — CRM Пасажири (менеджери)
-// Живе в таблиці: Passengers_crm_Oksi
+// Yarema_Bus_Passengers.gs — CRM Пасажири (менеджери)
+// Живе в таблиці: Passengers_crm_Yarema
 // Deploy: Web App → доступ "Будь-хто"
 // ================================================================
 //
@@ -84,13 +84,13 @@ var DATA_START = 2;
 
 // ── ВСІ ТАБЛИЦІ СИСТЕМИ (SpreadsheetApp.openById) ──
 var DB = {
-  PASSENGERS: '1dCztfyvqFgCEIA6nmtLGFv94QPNDJa5lhCsWpzDVXxY',
-  POSYLKI:    '1kcF3JchG5n7OzB_K2h9hxBqap7xHDnKN5nwMO9Fm2eo',
-  MARHRUT:    '1to9F6K4p46ZUVva0ZG7nCO7ZFbW1ve0SUnathsqhUW0',
-  KLIYENTU:   '1e-V4gK63I3VPlwg_PpYmVOLAYF3YG_s866D5Ys0vVw4',
-  FINANCE:    '1Np3hLCwUIWW9FqWJDZjF_dUQZMIjY16oEH_Z8zEBe_A',
-  CONFIG:     '16j7sX17Ic45dbyyC7qvEG-8VuNtUdCz8d0S03FbABJs',
-  ARCHIVE:    '1Id93R7TJeIP62Gye7fFnu4q3YBZpRr2x652RWphLUiE'
+  PASSENGERS: '1xJFRRkQquOdqK2gmSkd05pwUDNje3yif4yETM8abcE',
+  POSYLKI:    '1VhWTnsmvSy9uIAcYqLvr-Q5VHbvlDZmfismAxUzlh4g',
+  MARHRUT:    '1SxfXQ0E05D7OuzNa7oRQMsiLu2kNNynn/gtcSEAIAbQ',
+  KLIYENTU:   '1VCKct8J83S2_t1Qld76bItJ1n-r9oMgtVgwa/zS-PeY',
+  FINANCE:    '1JQBbXOqgrKfyCSDAltTqBt-SXwPkqhp-RUVtq162r4c',
+  CONFIG:     '1rfqMaZlg0fDlDpLl5id4ul-3z4jqC3OwwBWrYsOseJl',
+  ARCHIVE:    '1JJF_j8vE_GMer5NwJmYJR02CyzvtdPqZVpuCevH9VPr4'
 };
 
 // Головна таблиця цього скрипта
@@ -2255,7 +2255,7 @@ function doGet(e) {
   try {
     switch (action) {
       case 'ping':
-        result = { ok: true, message: 'Borispol Vip Travel CRM v3 API', version: '3.0', timestamp: new Date().toISOString() };
+        result = { ok: true, message: 'Yarema Bus CRM v3 API', version: '3.0', timestamp: new Date().toISOString() };
         break;
       case 'getAll':
         result = apiGetAll({ sheet: e.parameter.sheet || 'all', filter: {} });

@@ -1,7 +1,7 @@
 {
-  "name": "Borispol Vip Travel CRM",
-  "short_name": "BVT CRM",
-  "description": "CRM Пасажири — Borispol Vip Travel",
+  "name": "Yarema Bus CRM",
+  "short_name": "Yarema CRM",
+  "description": "CRM Пасажири — Yarema Bus",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

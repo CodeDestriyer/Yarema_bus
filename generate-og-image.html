@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Генератор іконок — Borispol Vip Travel</title>
+    <title>Генератор іконок — Yarema Bus</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; }
@@ -25,7 +25,7 @@
 </head>
 <body>
 
-<h1>Генератор іконок Borispol Vip Travel</h1>
+<h1>Генератор іконок Yarema Bus</h1>
 <p class="subtitle">Натисни кнопку — скачаєш всі файли одразу</p>
 
 <div class="grid">
@@ -59,7 +59,7 @@
 <button class="btn btn-all" onclick="downloadAll()">⬇ Скачати всі в ZIP-архіві</button>
 
 <p class="note">
-    Після завантаження — закинь всі файли на хостинг в папку з Pasanger_Oksi.html:<br>
+    Після завантаження — закинь всі файли на хостинг в папку з Pasanger_Yarema.html:<br>
     <b>icon-180.png, icon-192.png, icon-512.png, og-image.png</b>
 </p>
 
@@ -86,17 +86,17 @@ function drawIcon(canvasId, size) {
     ctx.textBaseline = 'middle';
     ctx.fillText('🚐', size / 2, size * 0.35);
 
-    // BORISPOL
+    // YAREMA
     ctx.fillStyle = 'white';
     ctx.font = '800 ' + (size * 0.15) + 'px Montserrat, Arial, sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText('BORISPOL', size / 2, size * 0.62);
+    ctx.fillText('YAREMA', size / 2, size * 0.62);
 
-    // VIP TRAVEL
+    // BUS
     ctx.fillStyle = '#d90d0d';
     ctx.font = '800 ' + (size * 0.12) + 'px Montserrat, Arial, sans-serif';
-    ctx.fillText('VIP TRAVEL', size / 2, size * 0.80);
+    ctx.fillText('BUS', size / 2, size * 0.80);
 }
 
 // ── OG Image (1200×630) ──
@@ -127,15 +127,15 @@ function drawOG() {
     ctx.textBaseline = 'middle';
     ctx.fillText('🚐', 600, 180);
 
-    // BORISPOL
+    // YAREMA
     ctx.fillStyle = 'white';
     ctx.font = '900 72px Montserrat, Arial, sans-serif';
-    ctx.fillText('BORISPOL', 600, 320);
+    ctx.fillText('YAREMA', 600, 320);
 
-    // VIP TRAVEL
+    // BUS
     ctx.fillStyle = '#d90d0d';
     ctx.font = '800 56px Montserrat, Arial, sans-serif';
-    ctx.fillText('VIP TRAVEL', 600, 400);
+    ctx.fillText('BUS', 600, 400);
 
     // Підпис
     ctx.fillStyle = 'rgba(255,255,255,0.5)';
@@ -241,7 +241,7 @@ function downloadAll() {
     var zip = createZip(files);
     var blob = new Blob([zip], { type: 'application/zip' });
     var a = document.createElement('a');
-    a.download = 'borispol-vip-travel-icons.zip';
+    a.download = 'yarema-bus-icons.zip';
     a.href = URL.createObjectURL(blob);
     a.click();
     URL.revokeObjectURL(a.href);
