@@ -3942,6 +3942,7 @@ function openMessengerPopup(phone, smartId) {
         <button class="messenger-popup-item" onclick="openMessenger('viber','${cleanPhone}')" style="background:#7360f2;color:white;border-color:#7360f2">💬 Viber</button>
         <button class="messenger-popup-item" onclick="openMessenger('telegram','${cleanPhone}')" style="background:#0088cc;color:white;border-color:#0088cc">✈️ Telegram</button>
         <button class="messenger-popup-item" onclick="openMessenger('whatsapp','${cleanPhone}')" style="background:#25d366;color:white;border-color:#25d366">📱 WhatsApp</button>
+        <button class="messenger-popup-item" onclick="openMessenger('whatsapp_business','${cleanPhone}')" style="background:#075e54;color:white;border-color:#075e54">💼 WhatsApp Business</button>
         ${smartBtn}
     `;
     document.getElementById('messengerOverlay').classList.add('show');
@@ -3968,7 +3969,21 @@ function openMessenger(type, contact) {
             window.open('https://t.me/+' + phoneNoPlus, '_blank');
             break;
         case 'whatsapp':
-            window.open('https://wa.me/' + phoneNoPlus, '_blank');
+            // Звичайний WhatsApp — на Android форсуємо пакет com.whatsapp через intent,
+            // щоб не відкривався WhatsApp Business, якщо встановлені обидва.
+            if (/Android/i.test(navigator.userAgent)) {
+                window.location.href = 'intent://send?phone=' + phoneNoPlus + '#Intent;scheme=whatsapp;package=com.whatsapp;end';
+            } else {
+                window.open('https://wa.me/' + phoneNoPlus, '_blank');
+            }
+            break;
+        case 'whatsapp_business':
+            // WhatsApp Business — форсуємо пакет com.whatsapp.w4b на Android.
+            if (/Android/i.test(navigator.userAgent)) {
+                window.location.href = 'intent://send?phone=' + phoneNoPlus + '#Intent;scheme=whatsapp;package=com.whatsapp.w4b;end';
+            } else {
+                window.open('https://wa.me/' + phoneNoPlus, '_blank');
+            }
             break;
         case 'smartsender':
             window.open('https://smartsender.com/contacts/' + encodeURIComponent(contact), '_blank');
