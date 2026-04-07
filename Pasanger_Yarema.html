@@ -3941,11 +3941,20 @@ function openMessengerPopup(phone, smartId) {
         <button class="messenger-popup-item" onclick="closeMessengerPopup(); window.open('tel:${cleanPhone}')" style="background:var(--primary);color:white;border-color:var(--primary)">📞 Дзвінок</button>
         <button class="messenger-popup-item" onclick="openMessenger('viber','${cleanPhone}')" style="background:#7360f2;color:white;border-color:#7360f2">💬 Viber</button>
         <button class="messenger-popup-item" onclick="openMessenger('telegram','${cleanPhone}')" style="background:#0088cc;color:white;border-color:#0088cc">✈️ Telegram</button>
-        <button class="messenger-popup-item" onclick="openMessenger('whatsapp','${cleanPhone}')" style="background:#25d366;color:white;border-color:#25d366">📱 WhatsApp</button>
-        <button class="messenger-popup-item" onclick="openMessenger('whatsapp_business','${cleanPhone}')" style="background:#075e54;color:white;border-color:#075e54">💼 WhatsApp Business</button>
+        <button class="messenger-popup-item" onclick="showWhatsappChoice('${cleanPhone}')" style="background:#25d366;color:white;border-color:#25d366">📱 WhatsApp</button>
         ${smartBtn}
     `;
     document.getElementById('messengerOverlay').classList.add('show');
+}
+
+// Показати під-вибір WhatsApp: звичайний чи Business
+function showWhatsappChoice(phone) {
+    const grid = document.getElementById('messengerGrid');
+    grid.innerHTML = `
+        <button class="messenger-popup-item" onclick="openMessenger('whatsapp','${phone}')" style="background:#25d366;color:white;border-color:#25d366">📱 Звичайний WhatsApp</button>
+        <button class="messenger-popup-item" onclick="openMessenger('whatsapp_business','${phone}')" style="background:#075e54;color:white;border-color:#075e54">💼 WhatsApp Business</button>
+        <button class="messenger-popup-item" onclick="closeMessengerPopup()" style="background:#888;color:white;border-color:#888">✖ Скасувати</button>
+    `;
 }
 
 // Закрити popup месенджерів
